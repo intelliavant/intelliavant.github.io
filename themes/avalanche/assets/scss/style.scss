@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import '_markdown.scss';
+@use 'sass:color';
+@use 'markdown';
 
 $primaryColor: #0f75bc;
 
@@ -94,8 +94,8 @@ html {
   color: #fff;
 
   &:hover, &:focus {
-    background: darken($primaryColor, 8%);
-    border-color: darken($primaryColor, 8%);
+    background: color.adjust($primaryColor, $lightness: -8%);
+    border-color: color.adjust($primaryColor, $lightness: -8%);
     color: #fff;
   }
 }
@@ -260,7 +260,7 @@ html {
   margin-bottom: 0;
   padding: 4.5rem 0;
   color: #fff;
-  background: linear-gradient(135deg, $primaryColor 0%, darken($primaryColor, 15%) 100%);
+  background: linear-gradient(135deg, $primaryColor 0%, color.adjust($primaryColor, $lightness: -15%) 100%);
 
   h2 {
     font-weight: 700;
