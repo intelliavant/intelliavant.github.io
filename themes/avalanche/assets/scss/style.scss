@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import '_product.scss';
 @import '_markdown.scss';
 
 $primaryColor: #0f75bc;
@@ -85,32 +84,199 @@ nav {
 
 }
 
-.hero-section {
-  height: 480px;
+html {
+  scroll-behavior: smooth;
+}
 
-  .container-fluid {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+.btn-brand {
+  background: $primaryColor;
+  border-color: $primaryColor;
+  color: #fff;
+
+  &:hover, &:focus {
+    background: darken($primaryColor, 8%);
+    border-color: darken($primaryColor, 8%);
+    color: #fff;
+  }
+}
+
+.hero-section {
+  margin-bottom: 0;
+  background-size: cover;
+  background-position: center;
+
+  .hero-overlay {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(8, 30, 52, 0.88) 0%, rgba(8, 30, 52, 0.6) 55%, rgba(8, 30, 52, 0.15) 100%);
+  }
+
+  .hero-content {
+    max-width: 620px;
+    color: #fff;
+    padding: 4rem 0;
+
+    h1 {
+      font-size: 3.25rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .lead {
+      font-weight: 300;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .hero-buttons .btn {
+    margin: 0 0.75rem 0.75rem 0;
+  }
+}
+
+.home-section {
+  padding: 5rem 0;
+  margin-bottom: 0;
+  scroll-margin-top: 64px;
+}
+
+.section-heading {
+  max-width: 680px;
+  margin: 0 auto 3rem;
+
+  .eyebrow {
+    color: $primaryColor;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  .section-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
   }
 }
 
 .columns-section {
-  .column {
+  .service-card {
+    background: #fff;
+    border: 1px solid #e6e9ee;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    .column-icon-row {
-      height: 80px;
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(15, 117, 188, 0.12);
     }
 
-    .column-icon {
-      max-width: 80px;
-      max-height: 80px;
+    h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 1.25rem 0 0.75rem;
     }
 
+    p {
+      color: #555;
+      margin: 0;
+    }
   }
 
+  .column-icon-row {
+    height: 64px;
+  }
+
+  .column-icon {
+    max-width: 64px;
+    max-height: 64px;
+  }
 }
 
+.features-section {
+  background: #f5f8fb;
+
+  .feature {
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: #555;
+    }
+  }
+
+  .feature-mark {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: $primaryColor;
+    margin-bottom: 1rem;
+  }
+}
+
+.process-section {
+  .process-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: #555;
+    }
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid $primaryColor;
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.cta-section {
+  margin-bottom: 0;
+  padding: 4.5rem 0;
+  color: #fff;
+  background: linear-gradient(135deg, $primaryColor 0%, darken($primaryColor, 15%) 100%);
+
+  h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+
+  .lead {
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .btn-light {
+    color: $primaryColor;
+    font-weight: 700;
+  }
+}
 
 .page-header {
 

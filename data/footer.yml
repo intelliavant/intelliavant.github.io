@@ -2,11 +2,16 @@ columns:
   -
     links:
       -
+        title: Home
+        href: /
+      -
+        title: Services
+        href: /#services
+      -
         title: About Us
         href: /about
-
       -
-        title: Products
-        href: /product
+        title: Privacy Policy
+        href: /privacy
 
-copyright: "(c) Copyrigth 2018-2021, Intelliavant Technologies, Ltd."
+copyright: "© 2018–2026 Intelliavant Technologies, Ltd."

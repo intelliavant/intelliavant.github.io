@@ -1,21 +1,79 @@
 hero:
   enable: true
   bg_image: "images/hero-100.jpg"
+  title: "Software, thoughtfully built."
+  subtitle: "Intelliavant is a software house crafting mobile apps, websites and web applications for businesses and individuals since 2018."
+  primary_button:
+    label: "Our Services"
+    href: "#services"
+  secondary_button:
+    label: "About Us"
+    href: "/about"
 
 
 columns:
   enable: true
+  id: services
+  eyebrow: What we do
   title: Our Services
+  subtitle: From a first idea to a production system, we cover the full journey.
   columns:
     -
       title: Mobile App Development
       icon: images/service-1.svg
-      content: We listen to your true needs and build the best mobile solution that suits to your business. Need to build a new system or improve your current system? Our professionals are here to help.
+      content: We listen to your true needs and build the best mobile solution that suits your business. Need to build a new system or improve your current one? Our professionals are here to help.
     -
       title: Website Building
       icon: images/service-2.svg
-      content: Design and develop website for small business and individual. We make your business reachable from the Internet.
+      content: We design and develop websites for small businesses and individuals, making your business reachable on the Internet.
     -
       title: Web App Development
       icon: images/service-3.svg
-      content: The development of reliable software solutions for the Internet. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.
+      content: Reliable software solutions for the Internet. We combine industry expertise with modern technology to deliver custom solutions that fit the needs and behavior of their users.
+
+
+features:
+  enable: true
+  eyebrow: Why Intelliavant
+  title: How we work
+  items:
+    -
+      title: Needs first
+      content: We start by understanding your business and your users, so we build what actually matters.
+    -
+      title: Quality engineering
+      content: Clean, tested, maintainable code that keeps working long after launch.
+    -
+      title: Clear communication
+      content: Regular updates and honest estimates. You always know where your project stands.
+    -
+      title: Long-term partnership
+      content: We stay around after delivery to support, maintain and grow your product.
+
+
+process:
+  enable: true
+  eyebrow: Our process
+  title: From idea to launch
+  steps:
+    -
+      title: Discover
+      content: Understand your goals, users and constraints.
+    -
+      title: Design
+      content: Shape the solution, architecture and user experience.
+    -
+      title: Build
+      content: Develop iteratively, with frequent demos and feedback.
+    -
+      title: Launch & support
+      content: Ship to production and keep it running smoothly.
+
+
+cta:
+  enable: true
+  title: Have a project in mind?
+  content: Tell us about your idea. We would love to hear how we can help.
+  button:
+    label: Learn more about us
+    href: /about

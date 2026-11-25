@@ -1,7 +1,9 @@
 <div class="container page-header">
+  {{ with .Params.header_image }}
   <div class="container intro-image">
-    <img src="{{ .Params.header_image }}"/>
+    <img src="{{ . }}"/>
   </div>
+  {{ end }}
 
   <ul class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{ site.BaseURL }}">Home</a></li>

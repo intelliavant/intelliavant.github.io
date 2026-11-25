@@ -3,32 +3,46 @@
 {{ $data := site.Data.homepage }}
 
 <!-- hero -->
-{{ if $data.hero.enable }} 
+{{ if $data.hero.enable }}
 {{ with $data.hero }}
-<section class="hero-section">
-  <div class="container-fluid hero-image" style="background-image: url({{ .bg_image }})">
+<section class="hero-section" style="background-image: url({{ .bg_image }})">
+  <div class="hero-overlay">
+    <div class="container">
+      <div class="hero-content">
+        <h1>{{ .title }}</h1>
+        <p class="lead">{{ .subtitle }}</p>
+        <div class="hero-buttons">
+          {{ with .primary_button }}<a class="btn btn-brand btn-lg" href="{{ .href }}">{{ .label }}</a>{{ end }}
+          {{ with .secondary_button }}<a class="btn btn-outline-light btn-lg" href="{{ .href }}">{{ .label }}</a>{{ end }}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 {{ end }}
 {{ end }}
 
 
-<!-- columns -->
+<!-- services -->
 {{ if $data.columns.enable }}
 {{ with $data.columns }}
-<section class="columns-section">
+<section class="columns-section home-section" id="{{ .id }}">
   <div class="container">
-    <div class="row my-3">
-      <h2 class="display-4 text-center">{{ .title }}</h2>
+    <div class="section-heading text-center">
+      {{ with .eyebrow }}<div class="eyebrow">{{ . }}</div>{{ end }}
+      <h2>{{ .title }}</h2>
+      {{ with .subtitle }}<p class="section-subtitle">{{ . }}</p>{{ end }}
     </div>
-    <div class="row gx-5">
+    <div class="row g-4">
       {{ range .columns }}
-      <div class="col-sm column">
-        <div class="column-icon-row text-center my-3">
-          <img class="column-icon" src="{{ .icon }}">
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <div class="column-icon-row">
+            <img class="column-icon" src="{{ .icon }}" alt="">
+          </div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .content }}</p>
         </div>
-        <h3 class="text-center my-3">{{ .title }}</h3>
-        <p>{{ .content }}</p>
       </div>
       {{ end }}
     </div>
@@ -38,8 +52,74 @@
 {{ end }}
 
 
+<!-- features -->
+{{ if $data.features.enable }}
+{{ with $data.features }}
+<section class="features-section home-section">
+  <div class="container">
+    <div class="section-heading text-center">
+      {{ with .eyebrow }}<div class="eyebrow">{{ . }}</div>{{ end }}
+      <h2>{{ .title }}</h2>
+    </div>
+    <div class="row g-4">
+      {{ range .items }}
+      <div class="col-md-6 col-lg-3">
+        <div class="feature">
+          <div class="feature-mark"></div>
+          <h4>{{ .title }}</h4>
+          <p>{{ .content }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+
+<!-- process -->
+{{ if $data.process.enable }}
+{{ with $data.process }}
+<section class="process-section home-section">
+  <div class="container">
+    <div class="section-heading text-center">
+      {{ with .eyebrow }}<div class="eyebrow">{{ . }}</div>{{ end }}
+      <h2>{{ .title }}</h2>
+    </div>
+    <ol class="process-steps row g-4">
+      {{ range $i, $step := .steps }}
+      <li class="col-md-6 col-lg-3">
+        <div class="step-number">{{ add $i 1 }}</div>
+        <h4>{{ $step.title }}</h4>
+        <p>{{ $step.content }}</p>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+
+<!-- call to action -->
+{{ if $data.cta.enable }}
+{{ with $data.cta }}
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>{{ .title }}</h2>
+    <p class="lead">{{ .content }}</p>
+    {{ with .button }}<a class="btn btn-light btn-lg" href="{{ .href }}">{{ .label }}</a>{{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+
+{{ with .Content }}
 <div class="container">
-{{ .Content }}
+{{ . }}
 </div>
+{{ end }}
 
 {{ end }}
