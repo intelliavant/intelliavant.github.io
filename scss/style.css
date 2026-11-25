@@ -1,104 +1,262 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-.product-section h1 {
-  margin-top: 4rem;
-  margin-bottom: 2rem; }
-
-.product-list-section .product-card {
-  min-height: 360px; }
-  .product-list-section .product-card img {
-    max-width: 100%;
-    height: 160px; }
-
 .content h1 {
   margin-top: 4rem;
-  margin-bottom: 2rem; }
-
+  margin-bottom: 2rem;
+}
 .content h2 {
   margin-top: 2rem;
-  margin-bottom: 1rem; }
-
+  margin-bottom: 1rem;
+}
 .content table {
   border-collapse: collapse;
-  margin-bottom: 1rem; }
-  .content table th, .content table td {
-    border: 1px solid #ccc;
-    padding: 4px 8px; }
-
+  margin-bottom: 1rem;
+}
+.content table th, .content table td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+}
 .content blockquote {
   background: #f0f0f0;
   padding-top: 8px;
   padding-bottom: 2px;
   padding-left: 16px;
-  border-left: 8px solid #e0e0e0; }
+  border-left: 8px solid #e0e0e0;
+}
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   background-color: #fff;
   margin: 0;
   padding: 0;
-  min-width: 768px; }
+  min-width: 768px;
+}
 
 header {
   background: #fff;
   height: 96px;
   transition: height ease-in-out 0.3s;
-  border-bottom: 1px solid #ccc; }
-  header .logo {
-    height: 48px;
-    transition: height ease-in-out 0.3s; }
-  header.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 64px; }
-    header.fixed .logo {
-      height: 32px; }
+  border-bottom: 1px solid #ccc;
+}
+header .logo {
+  height: 48px;
+  transition: height ease-in-out 0.3s;
+}
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+}
+header.fixed .logo {
+  height: 32px;
+}
 
 section {
-  margin-bottom: 48px; }
+  margin-bottom: 48px;
+}
 
 footer {
   min-height: 240px;
   background: #333;
-  color: #fff; }
-  footer .copyright {
-    font-size: 14px;
-    color: #aaa; }
-  footer a {
-    color: #fff;
-    text-decoration: none; }
-  footer a:visited {
-    color: #fff; }
-  footer a:hover {
-    text-decoration: underline; }
+  color: #fff;
+}
+footer .copyright {
+  font-size: 14px;
+  color: #aaa;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:visited {
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+}
 
 nav > a {
   text-decoration: none;
   margin: 0 2rem;
   font-weight: bold;
-  color: #0f75bc; }
-  nav > a:visited {
-    color: #0f75bc; }
+  color: #0f75bc;
+}
+nav > a:visited {
+  color: #0f75bc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-brand {
+  background: #0f75bc;
+  border-color: #0f75bc;
+  color: #fff;
+}
+.btn-brand:hover, .btn-brand:focus {
+  background: rgb(4.7000869313%, 36.6606780643%, 58.9077562059%);
+  border-color: rgb(4.7000869313%, 36.6606780643%, 58.9077562059%);
+  color: #fff;
+}
 
 .hero-section {
-  height: 480px; }
-  .hero-section .container-fluid {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% auto; }
+  margin-bottom: 0;
+  background-size: cover;
+  background-position: center;
+}
+.hero-section .hero-overlay {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(8, 30, 52, 0.88) 0%, rgba(8, 30, 52, 0.6) 55%, rgba(8, 30, 52, 0.15) 100%);
+}
+.hero-section .hero-content {
+  max-width: 620px;
+  color: #fff;
+  padding: 4rem 0;
+}
+.hero-section .hero-content h1 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+.hero-section .hero-content .lead {
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.hero-section .hero-buttons .btn {
+  margin: 0 0.75rem 0.75rem 0;
+}
 
-.columns-section .column .column-icon-row {
-  height: 80px; }
+.home-section {
+  padding: 5rem 0;
+  margin-bottom: 0;
+  scroll-margin-top: 64px;
+}
 
-.columns-section .column .column-icon {
-  max-width: 80px;
-  max-height: 80px; }
+.section-heading {
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+.section-heading .eyebrow {
+  color: #0f75bc;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.section-heading h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.section-heading .section-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+}
 
+.columns-section .service-card {
+  background: #fff;
+  border: 1px solid #e6e9ee;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.columns-section .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(15, 117, 188, 0.12);
+}
+.columns-section .service-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 1.25rem 0 0.75rem;
+}
+.columns-section .service-card p {
+  color: #555;
+  margin: 0;
+}
+.columns-section .column-icon-row {
+  height: 64px;
+}
+.columns-section .column-icon {
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.features-section {
+  background: #f5f8fb;
+}
+.features-section .feature h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.features-section .feature p {
+  color: #555;
+}
+.features-section .feature-mark {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: #0f75bc;
+  margin-bottom: 1rem;
+}
+
+.process-section .process-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.process-section .process-steps h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.process-section .process-steps p {
+  color: #555;
+}
+.process-section .step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #0f75bc;
+  color: #0f75bc;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  margin-bottom: 0;
+  padding: 4.5rem 0;
+  color: #fff;
+  background: linear-gradient(135deg, #0f75bc 0%, rgb(3.6656041727%, 28.5917125471%, 45.9422389646%) 100%);
+}
+.cta-section h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+.cta-section .lead {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.cta-section .btn-light {
+  color: #0f75bc;
+  font-weight: 700;
+}
+
+.page-header .intro-image img {
+  width: 100%;
+}
 .page-header .intro-image {
-  margin-bottom: 3rem; }
-  .page-header .intro-image img {
-    width: 100%; }
+  margin-bottom: 3rem;
+}
